@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page - Desarrollo de Software</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script src="https://kit.fontawesome.com/d188054eba.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+  <!--header-->
+  <header>
+    <nav>
+      <div class="logo">Desarrollo<span>Software</span></div>
+      <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+      <ul class="menu">
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#portfolio">Portafolio</a></li>
+        <li><a href="#faq">Preguntas Frecuentes</a></li>
+        <li><a href="#contact-us">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br><br><br>
+  
+<!--hero-->
+  <div class="hero">
+    <!-- Slider -->
+    <div class="hero-slider">
+      <img src="imagenes/slider1.jpg" alt="Slide 1" class="slide active">
+      <img src="imagenes/slider2.webp" alt="Slide 2" class="slide">
+    </div>
+  
+    <!-- Contenido del slider -->
+    <div class="hero-content">
+      <h1>Encuentre una mejor empresa de servicios de <span>Software</span></h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, nulla?</p>
+      <div class="hero-buttons">
+        <a href="#contact-us" class="btn btn-blue">Contacto</a>
+        <a href="#" class="btn btn-white">Compra Ahora</a>
+      </div>
+    </div>
+  
+    <!-- Controles de navegación -->
+    <i class="fa-solid fa-arrow-left control prev"></i>
+    <i class="fa-solid fa-arrow-right control next"></i>
+  </div>
+  
+<!-- Modal compra-->
+  <div id="purchaseModal" class="modal-compra">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Customer Plans Anytime</h2>
+      <div class="pricing-options">
+        <!-- Plan Básico -->
+        <div class="pricing-card wow animate__backInRight" data-wow-duration="1s" data-wow-delay="0.1s">
+          <h3>$29/w</h3>
+          <p class="plan-title ">Basic Plan</p>
+          <ul>
+            <li>40 Space Users</li>
+            <li>Servicio Ilimitado</li>
+            <li>15 GB Space</li>
+            <li>Unlimited Bandwidth</li>
+            <li>Ayuda al Cliente</li>
+          </ul>
+          <button class="btn btn-green">Buy Now</button>
+        </div>
+  
+        <!-- Plan Avanzado -->
+        <div class="pricing-card wow animate__bounceInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+          <h3>$39/m</h3>
+          <p class="plan-title">Advance Plan</p>
+          <ul>
+            <li>40 Space Users</li>
+            <li>Servicio Ilimitado</li>
+            <li>15 GB Space</li>
+            <li>Unlimited Bandwidth</li>
+            <li>Ayuda al Cliente</li>
+          </ul>
+          <button class="btn btn-green">Buy Now</button>
+        </div>
+  
+        <!-- Plan Premium -->
+        <div class="pricing-card wow animate__backInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+          <h3>$49/y</h3>
+          <p class="plan-title">Premium Plan</p>
+          <ul>
+            <li>40 Space Users</li>
+            <li>Servicio Ilimitado</li>
+            <li>15 GB Space</li>
+            <li>Unlimited Bandwidth</li>
+            <li>Ayuda al Cliente</li>
+          </ul>
+          <button class="btn btn-green">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+<!--About-->
+  <section id="about" class="about-section">    
+    <div class="about-container">
+      <div class="about-text">
+        <h2>Acerca de nosotros</h2>
+        <p>Ejecutamos nuestras <span class="highlight">Ideas</span> de principio a fin.</p>
+        <p>En DesarrolloSoftware contamos con un equipo excepcional de consultores con experiencia en diversas áreas. Nos comprometemos a resolver desafíos empresariales complejos utilizando las últimas tecnologías y recursos de datos, combinados con nuestro enfoque estratégico creativo y colaborativo.</p>
+        <a href="javascript:void(0);" class="btn" id="toggle-video">Ver Más</a>
+  
+        <!-- Video de YouTube oculto inicialmente -->
+        <div id="video-section" class="video-container" style="display: none;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2C8ff-QW2_U?si=KD288XZI_gQPsvDM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="about-images">
+        <img src="imagenes/1.png" alt="Team member 1">
+        <img src="imagenes/2.jpg" alt="Team member 2">
+        <img src="imagenes/2.png" alt="Team member 3">
+      </div>
+    </div>
+  </section>
+
+  
+<!--servicios-->
+  <section id="services">
+    <h2>Nuestros Servicios</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="services-grid">
+      <div class="service-card wow animate__fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Diseño Limpio</h3>
+        <p>Lorem ipsum dolor sit amet, elit, a sed diam nonummy nibh tincidunt consectetur adipiscing.</p>
+        <ul>
+          <li>✔ Servicio Ilimitado</li>
+          <li>✔ Ayuda al Cliente</li>
+        </ul>
+        <button>Ver Más</button>
+      </div>
+      <div class="service-card wow animate__fadeInDown" data-wow-duration="1s" data-wow-delay="0.2s">
+        <i class="fas fa-camera"></i>
+        <h3>Fotografía</h3>
+        <p>Lorem ipsum dolor sit amet, elit, a sed diam nonummy nibh tincidunt consectetur adipiscing.</p>
+        <ul>
+          <li>✔ Servicio Ilimitado</li>
+          <li>✔ Ayuda al Cliente</li>
+        </ul>
+        <button>Ver Más</button>
+      </div>
+      <div class="service-card wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
+        <i class="fas fa-lightbulb"></i>
+        <h3>Ideas Creativas</h3>
+        <p>Lorem ipsum dolor sit amet, elit, a sed diam nonummy nibh tincidunt consectetur adipiscing.</p>
+        <ul>
+          <li>✔ Servicio Ilimitado</li>
+          <li>✔ Ayuda al Cliente</li>
+        </ul>
+        <button>Ver Más</button>
+      </div>
+      <div class="service-card wow animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0.4s">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Marketing en Línea</h3>
+        <p>Lorem ipsum dolor sit amet, elit, a sed diam nonummy nibh tincidunt consectetur adipiscing.</p>
+        <ul>
+          <li>✔ Servicio Ilimitado</li>
+          <li>✔ Ayuda al Cliente</li>
+        </ul>
+        <button>Ver Más</button>
+      </div>
+      <div class="service-card wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+        <i class="fas fa-comments"></i>
+        <h3>Comunicación</h3>
+        <p>Lorem ipsum dolor sit amet, elit, a sed diam nonummy nibh tincidunt consectetur adipiscing.</p>
+        <ul>
+          <li>✔ Servicio Ilimitado</li>
+          <li>✔ Ayuda al Cliente</li>
+        </ul>
+        <button>Ver Más</button>
+      </div>
+      <div class="service-card wow animate__fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s">
+        <i class="fas fa-headset"></i>
+        <h3>Soporte Ilimitado</h3>
+        <p>Lorem ipsum dolor sit amet, elit, a sed diam nonummy nibh tincidunt consectetur adipiscing.</p>
+        <ul>
+          <li>✔ Servicio Ilimitado</li>
+          <li>✔ Ayuda al Cliente</li>
+        </ul>
+        <button>Ver Más</button>
+      </div>
+    </div>
+  </section>
+  
+<!-- equipo-->
+  <section id="team" class="team">
+    <h2>Nuestros Miembros del Equipo</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="team-grid">
+      <!-- Miembro 1 -->
+      <div class="team-card">
+        <div class="team-image">
+          <img src="imagenes/t1.jpg" alt="Niliyan Das">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h3>Niliyan Das</h3>
+        <p>Marketing</p>
+      </div>
+      <!-- Miembro 2 -->
+      <div class="team-card">
+        <div class="team-image">
+          <img src="imagenes/t2.jpg" alt="Wation Poran">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h3>Wation Poran</h3>
+        <p>Funador</p>
+      </div>
+      <!-- Miembro 3 -->
+      <div class="team-card">
+        <div class="team-image">
+          <img src="imagenes/t3.jpg" alt="Nicolas Poran">
+          <div class="overlay">
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <h3>Nicolas Poran</h3>
+        <p>Oficinista</p>
+      </div>
+    </div>
+  </section>
+<br>
+  
+  
+<!--portafolio-->
+  <section id="portfolio" class="portfolio-section">
+    <div class="portfolio-container">
+      <div class="portfolio-item">
+        <img src="imagenes/p1.jpg" alt="Portfolio 1">
+        <div class="portfolio-overlay">
+          <p class="portfolio-info">Información sobre el proyecto</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="imagenes/p2.jpg" alt="Portfolio 2">
+        <div class="portfolio-overlay">
+          <p class="portfolio-info">Información sobre el proyecto</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="imagenes/p4.jpg" alt="Portfolio 3">
+        <div class="portfolio-overlay">
+          <p class="portfolio-info">Información sobre el proyecto</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="imagenes/p5.jpg" alt="Portfolio 4">
+        <div class="portfolio-overlay">
+          <p class="portfolio-info">Información sobre el proyecto</p>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="imagenes/p6.jpg" alt="Portfolio 5">
+        <div class="portfolio-overlay">
+          <p class="portfolio-info">Información sobre el proyecto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!--acordeon-->
+  <section id="faq" class="faq-section">
+    <div class="faq-container">
+      <!-- Contenedor de la imagen -->
+      <div class="faq-image">
+        <img src="imagenes/FAQ.jpg" alt="FAQ Image">
+      </div>
+  
+      <!-- Contenedor de los acordeones -->
+      <div class="faq-content">
+        <h2>Preguntas Frecuentes</h2>
+        <p>Encuentra respuestas a las preguntas más comunes sobre nuestro servicio.</p>
+  
+        <!-- Acordeón 1 -->
+        <div class="accordion">
+          <button class="acordeon-tit">
+            <i class="fa fa-plus"></i> ¿Proporcionan algún script con sus plantillas?
+          </button>
+          <div class="acordeon-cont">
+            <p>Nuestras plantillas no incluyen scripts adicionales. Las suscripciones a boletines, campos de búsqueda, foros y galerías de imágenes están inactivos. Se pueden agregar fácilmente scripts básicos en www.zemez.io.</p>
+          </div>
+        </div>
+  
+        <!-- Acordeón 2 -->
+        <div class="accordion">
+          <button class="acordeon-tit">
+            <i class="fa fa-plus"></i> ¿Qué recibo cuando compro una plantilla?
+          </button>
+          <div class="acordeon-cont">
+            <p>Después de completar el pago a través de nuestro formulario seguro, recibirás las instrucciones para descargar el producto. Los archivos fuente en el paquete de descarga pueden variar según el tipo de producto adquirido.</p>
+          </div>
+        </div>
+  
+        <!-- Acordeón 3 -->
+        <div class="accordion">
+          <button class="acordeon-tit">
+            <i class="fa fa-plus"></i> ¿En qué formatos están disponibles sus plantillas?
+          </button>
+          <div class="acordeon-cont">
+            <p>Las plantillas de sitio web están disponibles en formatos Photoshop y HTML. Las fuentes están incluidas con el archivo Photoshop. En la mayoría de las plantillas, HTML es compatible con Adobe® Dreamweaver® y Microsoft® FrontPage®.</p>
+          </div>
+        </div>
+  
+        <!-- Acordeón 4 -->
+        <div class="accordion">
+          <button class="acordeon-tit">
+            <i class="fa fa-plus"></i> ¿Qué puedo hacer con las plantillas?
+          </button>
+          <div class="acordeon-cont">
+            <p>Puedes crear un sitio web utilizando la plantilla como desees. No puedes revender ni redistribuir las plantillas (como lo hacemos nosotros); reclamar propiedad intelectual o exclusiva sobre cualquiera de nuestros productos, modificados o no modificados. Todos los productos son propiedad de las empresas y personas que proveen el contenido.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  
+  
+<!--contactanos-->
+  <section id="contact-us" class="contact-section">
+    <div class="contact-container">
+      <!-- Address -->
+      <div class="contact-item">
+        <div class="contact-icon">
+          <a href="https://www.google.com/maps?q=Unit-521,+Tower+B4,+Spaze+I+Tech+Park,+Sector+49,+Sohna+Road,+Gurugram,+Haryana+-+122018" 
+             target="_blank">
+            <i class="fas fa-map-marker-alt"></i>
+          </a>
+        </div>
+        <div class="contact-info">
+          <h4>Direccion</h4>
+          <p>Unit-521, Tower B4, Spaze I Tech Park, Sector 49,<br>Gurugram, Haryana - 122018</p>
+        </div>
+      </div>
+      <!-- Email -->
+      <div class="contact-item">
+        <div class="contact-icon">
+          <i class="fas fa-envelope" onclick="openEmailModal()"></i>
+        </div>
+        <div class="contact-info">
+          <h4>Correo</h4>
+          <p>info@fluid3infotech.com</p>
+        </div>
+      </div>
+      <!-- Phone -->
+      <div class="contact-item">
+        <div class="contact-icon">
+          <a href="tel:+918069245441">
+            <i class="fas fa-phone-alt"></i>
+          </a>
+        </div>
+        <div class="contact-info">
+          <h4>Numero Telefonico</h4>
+          <p>+91-8069245441</p>
+        </div>
+      </div>
+    </div>
+  
+    
+    <!-- Modal -->
+<div id="emailModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeEmailModal()">&times;</span>
+    <h3>Send Us an Email</h3>
+    <form id="emailForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</div>
+
+  </section>
+  
+  
+<!--footer-->
+<footer>
+  
+  <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+  <!-- Galería en el footer -->
+  <div class="footer-gallery">
+    <h3>Gallery</h3>
+    <div class="gallery-images">
+      <a href="imagenes/1.png" data-fancybox="gallery">
+        <img src="imagenes/1.png" alt="Imagen 1">
+      </a>
+      <a href="imagenes/2.png" data-fancybox="gallery">
+        <img src="imagenes/2.png" alt="Imagen 2">
+      </a>
+      <a href="imagenes/p1.jpg" data-fancybox="gallery">
+        <img src="imagenes/p1.jpg" alt="Imagen 3">
+      </a>
+      <a href="imagenes/p2.jpg" data-fancybox="gallery">
+        <img src="imagenes/p2.jpg" alt="Imagen 4">
+      </a>
+      <a href="imagenes/p4.jpg" data-fancybox="gallery">
+        <img src="imagenes/p4.jpg" alt="Imagen 5">
+      </a>
+      <a href="imagenes/p5.jpg" data-fancybox="gallery">
+        <img src="imagenes/p5.jpg" alt="Imagen 6">
+      </a>
+    </div>
+  </div>
+<br>
+  <p>© 2024 Desarrollo Software. Todos los derechos reservados.</p>
+</footer>
+
+
+
+  
+
+  <script>
+/*menu responsive*/
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const menu = document.querySelector(".menu");
+    
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("show");
+      });
+    });
+    
+    
+
+
+// Selección de elementos hero slider
+    const slider = document.querySelector('.hero-slider');
+    const slides = document.querySelectorAll('.hero-slider img');
+    const prevBtn = document.querySelector('.control.prev');
+    const nextBtn = document.querySelector('.control.next');
+    let currentIndex = 0;
+
+    // Variables para manejar los gestos táctiles
+    let startX = 0;
+    let endX = 0;
+
+    // Función para mostrar un slide específico
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    // Función para mostrar el slide anterior
+    function showPrevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Cicla hacia atrás
+      showSlide(currentIndex);
+    }
+
+    // Función para mostrar el siguiente slide
+    function showNextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length; // Cicla hacia adelante
+      showSlide(currentIndex);
+    }
+
+    // Eventos para las flechas
+    prevBtn.addEventListener('click', showPrevSlide);
+    nextBtn.addEventListener('click', showNextSlide);
+
+    // Manejo de gestos táctiles en el contenedor del slider
+    slider.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX; // Captura la posición inicial del toque
+    });
+
+    slider.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX; // Captura la posición final del toque
+      const deltaX = endX - startX;
+
+      if (deltaX > 50) {
+        // Deslizar hacia la derecha (slide anterior)
+        showPrevSlide();
+      } else if (deltaX < -50) {
+        // Deslizar hacia la izquierda (slide siguiente)
+        showNextSlide();
+      }
+    });
+
+
+// Selecciona elementos del modal comprara
+  const modal = document.getElementById("purchaseModal");
+  const purchaseBtn = document.querySelector(".btn.btn-white"); // Asegúrate de que este botón esté en el HTML
+  const closeBtn = document.querySelector(".modal-compra .close");
+
+  // No mostrar el modal al inicio
+  window.addEventListener("DOMContentLoaded", () => {
+    modal.style.display = "none"; // Asegura que el modal esté oculto cuando la página carga
+  });
+
+  // Abre el modal cuando se hace clic en el botón
+  purchaseBtn.addEventListener("click", () => {
+    modal.style.display = "block"; // Muestra el modal
+  });
+
+  // Cierra el modal al hacer clic en la "X"
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none"; // Oculta el modal
+  });
+
+  // Cierra el modal si se hace clic fuera de él
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none"; // Oculta el modal
+    }
+  });
+
+
+//video ver mas
+  $("#toggle-video").click(function () {
+    var videoSection = $("#video-section");
+
+    // Alternar la visibilidad del video
+    videoSection.slideToggle();
+  });
+
+
+  new WOW({
+    boxClass: 'wow', // Clase WOW
+    animateClass: 'animate__animated', // Clase de Animate.css
+    offset: 100, // Distancia para activar la animación
+    mobile: true, // Habilitar en dispositivos móviles
+    live: true // Activa WOW.js en elementos dinámicos
+  }).init();
+
+
+/*team*/
+  // Solo habilitar en pantallas móviles
+  if (window.innerWidth <= 768) {
+    const teamCards = document.querySelectorAll('.team-card');
+
+    teamCards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Alternamos la clase 'show-icons' en la tarjeta para mostrar u ocultar los íconos
+        card.classList.toggle('show-icons');
+      });
+    });
+  }
+
+
+
+
+/*carrusell de portafolio*/
+  let portfolioContainer = document.querySelector('.portfolio-container');
+  let items = document.querySelectorAll('.portfolio-item');
+  let totalItems = items.length;
+  let itemWidth = items[0].offsetWidth + 20; // Ancho de cada item + margen
+  let carouselIndex = 0;
+
+  // Duplicamos el contenido del contenedor para hacerlo más largo
+  portfolioContainer.innerHTML += portfolioContainer.innerHTML;
+
+  function moveToNext() {
+    // Mover el contenedor hacia la izquierda
+    portfolioContainer.style.transition = 'transform 0.3s ease';  // Transición suave
+    portfolioContainer.style.transform = `translateX(-${(carouselIndex + 1) * itemWidth}px)`;  // Desplazamiento suave
+    carouselIndex++;
+
+    // Cuando el contenedor ha desplazado todo el contenido visible, lo restablecemos sin corte
+    if (carouselIndex >= totalItems) {
+      // Desactivar la transición temporalmente para el reinicio sin cortes
+      setTimeout(() => {
+        portfolioContainer.style.transition = 'none'; // Desactivamos la transición momentáneamente
+        portfolioContainer.style.transform = `translateX(0)`; // Volvemos a la posición inicial
+        carouselIndex = 0; // Reiniciamos el índice
+      }, 300);  // Esperamos que termine la animación para hacer el reinicio sin corte
+
+      // Reactivar la transición después de que el contenedor haya vuelto a la posición inicial
+      setTimeout(() => {
+        portfolioContainer.style.transition = 'transform 0.3s ease';  // Reactivamos la transición
+      }, 400);  // Esperamos un poco para permitir que la transición se reactive
+    }
+  }
+
+  // Mueve el carrusel cada 3 segundos
+  setInterval(moveToNext, 3000);
+
+
+
+
+
+// Obtener todos los botones de acordeón
+  $(document).ready(function () {
+    $(".acordeon-tit").click(function () {
+      var t = $(this);
+      var tp = t.next();
+
+      // Cerrar todos los acordeones excepto el que se está seleccionando
+      $(".acordeon-cont").not(tp).slideUp();
+      $(".acordeon-tit").not(t).removeClass("active").find("i").removeClass("fa-minus").addClass("fa-plus");
+
+      // Alternar el acordeón actual
+      tp.stop(true, true).slideToggle();
+      t.toggleClass("active");
+
+      // Cambiar el icono entre "+" y "-"
+      t.find("i").toggleClass("fa-plus fa-minus");
+    });
+  });
+
+
+
+
+
+// Abrir el modal formulario
+  function openEmailModal() {
+    document.getElementById("emailModal").style.display = "block";
+  }
+
+  // Cerrar el modal
+  function closeEmailModal() {
+    document.getElementById("emailModal").style.display = "none";
+  }
+
+  // Manejar el envío del formulario
+  document.getElementById("emailForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // Aquí puedes configurar una llamada a tu servidor para enviar el correo
+    console.log({
+      name,
+      email,
+      subject,
+      message,
+    });
+
+    alert("Your message has been sent successfully!");
+    closeEmailModal();
+  });
+
+
+
+
+
+
+
+// Mostrar el botón cuando el usuario haga scroll hacia abajo
+  window.onscroll = function() {
+    var scrollTopButton = document.querySelector(".scroll-top");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollTopButton.style.display = "block"; // Mostrar el botón
+    } else {
+      scrollTopButton.style.display = "none"; // Ocultar el botón cuando se está en la parte superior
+    }
+  };
+
+  // Función para hacer scroll hacia arriba suavemente
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Desplazamiento suave hacia el inicio
+    });
+  }
+
+
+
+
+  //galeria
+  $(document).ready(function() {
+    $('[data-fancybox="gallery"]').fancybox({
+      loop: true,
+      buttons: [
+        "slideShow",
+        "thumbs",
+        "close"
+      ],
+      protect: true
+    });
+  });
+
+  </script>
+</body>
+</html>
